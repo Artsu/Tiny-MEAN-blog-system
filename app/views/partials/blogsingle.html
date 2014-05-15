@@ -1,0 +1,10 @@
+<div fp-blog-admin-panel></div>
+<article>
+    <p class="text-muted">{{blogPost.date | date:'yyyy-MM-dd'}} // by {{blogPost.author}}</p>
+    <hr/>
+    <blockquote ng-show="blogPost.update">
+        {{blogPost.update}}
+    </blockquote>
+    <h1>{{blogPost.title}}</h1>
+    <span ng-bind-html="blogPost.body"></span>
+</article>

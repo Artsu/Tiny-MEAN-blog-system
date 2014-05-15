@@ -1,0 +1,150 @@
+<div class="row">
+    <div class="col-sm-12 ">
+        <div class="jumbotron">
+            <h1>Tiny MEAN blog system</h1>
+            <p>Welcome to tiny MEAN blog system! It is a very small yet sturdy blog system that consists of full mean stack (<a href="http://www.mongodb.org/">Mongodb</a>, <a href="http://expressjs.com/">Express</a>, <a href="http://angularjs.org/">AngularJS</a> & <a href="http://nodejs.org/">NodeJS</a>). The system is mostly done for learning purposes, but feel free to use it in any way you want.</p>
+            <p><a href="http://nivasalo.com/projects/tiny-mean-blog">See the project webpage</a> for some further information and pictures</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="#features" target="_self" class="thumbnail text-center">
+                        <span class="jumbotron-icon glyphicon glyphicon-wrench"></span>
+                        <p>Features</p>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="#installation" target="_self" class="thumbnail text-center">
+                        <span class="jumbotron-icon glyphicon glyphicon-cog"></span>
+                        <p>Installation</p>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="#technologies" target="_self" class="thumbnail text-center">
+                        <span class="jumbotron-icon glyphicon glyphicon-wrench"></span>
+                        <p>Technologies</p>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div id="features" class="col-sm-12">
+        <h2>Features</h2>
+        <p>The tiny MEAN blog system can do all this and more:</p>
+        <ul>
+            <li>Login using <a href="http://passportjs.org/">passport</a></li>
+            <li>Add and edit new blog posts</li>
+            <li>Delete blog posts</li>
+            <li>Automatic pagination for blog posts</li>
+            <li>Embedded <a href="http://ckeditor.com/">ckeditor</a> for both content and ingress</li>
+            <li>Dynamically created breadcrumb</li>
+            <li>AngularJS frontend</li>
+            <li>Node.js & Express backend</li>
+            <li>MongoDB as database solution</li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div id="installation" class="col-sm-12">
+        <h2>Installation</h2>
+        <p>To install the blog system follow these easy steps:</p>
+        <ul>
+            <li>Download the package from GitHub <code>git clone https://github.com/Artsu/Tiny-MEAN-blog-system.git mean-blog</code></li>
+            <li>Run <code>npm install</code> and <code>bower install</code> commands (must have npm and bower installed)</li>
+            <li>Run one of the following commands
+                <ul>
+                    <li><code>grunt serve</code> launches the node-express server with test data so you can start trying it out. Includes watch and livereload plugins.</li>
+                    <li><code>grunt serve:dist</code> once you are done with your editing, run this command before going live and make sure everything works. This does the same as grunt serve but it build the dist package first and doesn't use watch or livereload.</li>
+                    <li><code>grunt</code> runs all the tests included in the project and builds the dist package which you can then dump to your production environment.</li>
+                </ul>
+            </li>
+            <li>Use /login page to login/create user. In production environment you should create your user and then edit routes.js so that <code>app.post('/api/users', users.create);</code> becomes <code>app.post('/api/users', middleware.auth, users.create);</code>. This makes it sure that no further users can create their accounts as there are no separate administrator roles included in the system.</li>
+        </ul>
+        <p>And basically that's it! For production environment you probably want to have some more software installed on the server such as apache/nginx, and forever to run the Node server as a background process that can start itself in case something bad happens.</p>
+        <p>In production environment remember to have <code>NODE_ENV</code> environment variable set to 'production'.</p>
+    </div>
+</div>
+
+<div class="row">
+    <div id="technologies" class="col-sm-12">
+        <h2>Technologies</h2>
+        <p>There are number of amazing technologies included in this project. Here are listed some of these technologies.</p>
+
+        <h4>Frontend:</h4>
+        <ul>
+            <li>AngularJS</li>
+            <li>Angular-UI</li>
+            <li>CKeditor</li>
+            <li>Twitter Bootstrap Sass</li>
+            <li>Testing:
+                <ul>
+                    <li>Karma</li>
+                    <li>Jasmine</li>
+                    <li>ngHtml2JsPreprocessor</li>
+                </ul>
+            </li>
+        </ul>
+        <h4>Backend:</h4>
+        <ul>
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>MongoDB</li>
+            <li>Passport</li>
+            <li>Testing:
+                <ul>
+                    <li>Mocha</li>
+                    <li>Supertest</li>
+                </ul>
+            </li>
+        </ul>
+        <h4>Build process:</h4>
+        <ul>
+            <li>Grunt</li>
+            <li>Originated from Yeoman <a href="">generator-angular-fullstack</a></li>
+        </ul>
+
+    </div>
+</div>
+
+<div class="row">
+    <div id="technologies" class="col-sm-12">
+        <h2>Technologies</h2>
+        <p>Some features are still under development and will be released later on. These include such as:</p>
+        <ul>
+            <li>Validation messages</li>
+            <li>Tags</li>
+            <li>Image uploader</li>
+            <li>Hiding blog posts</li>
+            <li>Versioning</li>
+            <li>Demo site</li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div id="technologies" class="col-sm-12">
+        <h2>License</h2>
+        <p>Copyright (c) 2014 Ari-Matti Nivasalo</p>
+
+        <p>Permission is hereby granted, free of charge, to any person obtaining
+        a copy of this software and associated documentation files (the
+        "Software"), to deal in the Software without restriction, including
+        without limitation the rights to use, copy, modify, merge, publish,
+        distribute, sublicense, and/or sell copies of the Software, and to
+        permit persons to whom the Software is furnished to do so, subject to
+        the following conditions:</p>
+
+        <p>The above copyright notice and this permission notice shall be included
+        in all copies or substantial portions of the Software.</p>
+
+        <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+        EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+        MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+        IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+        CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+        TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+        SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+    </div>
+</div>

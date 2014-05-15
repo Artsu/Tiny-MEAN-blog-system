@@ -1,0 +1,133 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html ng-app="homepageApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html ng-app="homepageApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html ng-app="homepageApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html ng-app="homepageApp" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="/">
+    <title ng-bind="pageTitle">Yoursite</title>
+    <meta name="description" content="Personal website of Ari-Matti Nivasalo. Thoughts on technology and other things.">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(app) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-motion/dist/angular-motion.min.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css({.tmp,app}) styles/main.css -->
+    <link rel="stylesheet" href="styles/application.css">
+    <!-- endbuild -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <script type="text/javascript">
+        /* No window._gaq.push(['_trackPageview']) is done here as we do that on angular '$routeChangeStart' event */
+        window._gaq = window._gaq || [];
+        window._gaq.push(['_setAccount', 'UA-XXXXX-X']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<div class="container">
+
+    <div class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand logo-text" href="#">Your logo here</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <div class="nav navbar-right main-nav">
+                <a href="/">       <button ng-class="{ active: isActive('/')}"        class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-home"></span> Home</button></a>
+                <a href="/blog">   <button ng-class="{ active: isActive('/blog')}"    class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-book"></span> Blog</button></a>
+            </div>
+
+            <ul class="nav navbar-nav mobile-nav">
+                <li ng-class="{ active: isActive('/')}"> <a href="/"><span class="glyphicon glyphicon-home"></span> Home</a>    </li>
+                <li ng-class="{ active: isActive('/blog')}"><a href="/blog"><span class="glyphicon glyphicon-book"></span> Blog</a>    </li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+
+    <div class="row">
+        <div class="col-md-9 col-md-push-3">
+            <div class="row">
+                <div class="col-md-12">
+                    <div fp-breadcrumb></div>
+                    <div ng-view></div><!-- Angular view -->
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-md-pull-9">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="text-center panel-title">Maybe something here?</h3>
+                </div>
+                <div class="panel-body">
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--[if lt IE 9]>
+<script src="bower_components/es5-shim/es5-shim.js"></script>
+<script src="bower_components/json3/lib/json3.min.js"></script>
+<![endif]-->
+
+<!-- build:js(app) scripts/vendor.js -->
+<script src="scripts/lib/ckeditor/ckeditor.js"></script>
+<script src="scripts/lib/ckeditor/config.js"></script>
+<script src="scripts/lib/ckeditor/styles.js"></script>
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/ng-ckeditor/ng-ckeditor.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<!-- endbower -->
+<script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/transition.js"></script>
+<script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/collapse.js"></script>
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/app.js"></script>
+<script src="scripts/filters.js"></script>
+<script src="scripts/services/blogservice.js"></script>
+<script src="scripts/controllers/home.js"></script>
+<script src="scripts/controllers/blog.js"></script>
+<script src="scripts/controllers/success.js"></script>
+<script src="scripts/directives/breadcrumb.js"></script>
+<script src="scripts/directives/blogadminpanel.js"></script>
+
+<script src="scripts/controllers/navbar.js"></script>
+<script src="scripts/controllers/login.js"></script>
+<script src="scripts/controllers/signup.js"></script>
+<script src="scripts/services/auth.js"></script>
+<script src="scripts/services/session.js"></script>
+<script src="scripts/services/user.js"></script>
+<script src="scripts/directives/mongooseError.js"></script>
+<!-- endbuild -->
+</body>
+</html>

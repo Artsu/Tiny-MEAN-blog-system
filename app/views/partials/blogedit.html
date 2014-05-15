@@ -1,0 +1,64 @@
+<h1 ng-show="blogPost.urlId">Editing blog post {{blogPost.urlId}}</h1>
+<h1 ng-hide="blogPost.urlId">New blog post</h1>
+
+<div fp-blog-admin-panel></div>
+<article>
+    <form>
+
+    <div class="row">
+        <div class="col-md-5">
+            <div class="form-group has-feedback" ng-class="{'has-error': datepickerForm.date.$invalid}">
+                <label class="control-label">Date</label>
+                <p class="input-group">
+                    <input ng-click="open($event)" type="text" class="form-control" ng-model="blogPost.date" datepicker-popup="yyyy-MM-dd" is-open="dateOpened" starting-day="1" name="date" ng-required="true" close-text="Close" />
+                    <!--<input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="dateOpened" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />-->
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </p>
+                <!--<datepicker ng-model="blogPost.date" show-weeks="true" starting-day="1" class="well well-sm"></datepicker>-->
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="name">Name</label>:<br>
+                <input type="text" class="form-control" id="name" name="name" ng-model="blogPost.title"/>
+                <span ng-show="errors.name">{{errors.name.type}}</span>
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="row">-->
+        <!--<div class="col-md-12">-->
+            <!--<p>-->
+                <!--<label for="hidden">Hidden</label>:-->
+                <!--<input type="checkbox" id="hidden" name="hidden" ng-model="blogPost.hidden"/>-->
+            <!--</p>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <div class="row">
+        <div class="col-md-12">
+            <p>
+                <label for="ingress">Ingress</label> (shows on blog post listing):<br/>
+                <textarea ckeditor="ingressEditorOptions" class="form-control" rows="8" id="ingress" name="ingress" ng-model="blogPost.ingress"></textarea>
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <p>
+                <label for="content">Content</label>:<br/>
+                <textarea ckeditor="contentEditorOptions" class="form-control" rows="16" id="content" name="content" ng-model="blogPost.body"></textarea>
+            </p>
+        </div>
+    </div>
+
+
+
+    <button ng-click="saveBlogPost();" class="btn btn-success">Save <span class="glyphicon glyphicon-floppy-disk"></span></button>
+    </form>
+</article>

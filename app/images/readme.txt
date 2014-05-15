@@ -1,0 +1,1 @@
+Put your images to this folder. Note that these are not handled statically.

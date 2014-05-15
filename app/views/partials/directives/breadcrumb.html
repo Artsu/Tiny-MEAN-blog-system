@@ -1,0 +1,8 @@
+<ol class="breadcrumb">
+    <!--<li><a href="/">Website</a></li>-->
+    <li ng-repeat="breadcrumb in breadcrumbs">
+        <a ng-href="{{breadcrumb.route}}" ng-show="breadcrumb.route">{{breadcrumb.name}}</a>
+        <span ng-hide="breadcrumb.route">{{breadcrumb.name}}</span>
+    </li>
+    <span ng-show="showBlogPostTitle">{{articleTitle}}</span>
+</ol>

@@ -1,0 +1,4 @@
+<div ng-show="isLoggedIn" class="blog-admin-top">
+    <a ng-show="blogPost.urlId" href="/blog/edit/{{blogPost.urlId}}"><button class="btn btn-warning"><span class="glyphicon glyphicon-cog"></span></button></a>
+    <a ng-show="blogPost.urlId" href=""><button class="btn btn-danger" ng-click="deleteBlogPost();" ><span class="glyphicon glyphicon-trash"></span></button></a>
+</div>

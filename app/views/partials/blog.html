@@ -1,0 +1,22 @@
+<div ng-show="isLoggedIn" class="blog-admin-top">
+    <a href="/blog/edit/"><button class="btn btn-success">Create new</button></a>
+</div>
+<div>
+    <ul class="blog-posts">
+        <li ng-repeat="blogPost in blogPosts">
+            <p class="text-muted">{{blogPost.date | date:'yyyy-MM-dd'}} // by {{blogPost.author}}</p>
+            <hr/>
+                <h1><span class="glyphicon glyphicon-font blog-post-icon"></span> {{blogPost.title}}</h1>
+                <p ng-bind-html="blogPost.ingress"></p>
+                <p class="continue-reading"><a href="/blog/{{blogPost.urlId}}/{{blogPost.title | urlParser}}">Continue reading...</a></p>
+        </li>
+    </ul>
+
+    <div class="text-center">
+        <pagination total-items="pages.bigTotalItems" ng-model="currentPage" max-size="pages.maxSize" class="pagination-sm" boundary-links="pages.boundaryLinks" items-per-page="pages.itemsPerPage" rotate="pages.rotate" num-pages="pages.numPages"></pagination>
+        <!--<pagination total-items="bigTotalItems" ng-model="bigCurrentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false" num-pages="numPages"></pagination>-->
+    </div>
+    <div class="text-center">
+        <!--<pagination total-items="175" ng-model="currentPage" max-size="5" class="pagination-sm" boundary-links="true" rotate="false" num-pages="10"></pagination>-->
+    </div>
+</div>

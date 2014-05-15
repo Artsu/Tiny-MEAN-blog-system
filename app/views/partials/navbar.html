@@ -1,0 +1,7 @@
+<div class="header" ng-controller="NavbarCtrl">
+  <ul class="nav nav-pills pull-right">
+    <li ng-hide="currentUser" ng-class="{active: isActive('/login')}"><a href="/login">Login</a></li>
+    <li ng-hide="currentUser" ng-class="{active: isActive('/signup')}"><a href="/signup">Sign up</a></li>
+    <li ng-show="currentUser" ng-class="{active: isActive('/logout')}"><a href="" ng-click="logout()">Logout</a></li>
+  </ul>
+</div>

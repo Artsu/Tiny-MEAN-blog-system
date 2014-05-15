@@ -1,0 +1,93 @@
+@import "base";
+
+$mobile: 767px;
+
+/* Colors */
+$error-red: red;
+$light-blue: #a9c0ef;
+
+.color-red {
+  color: $error-red;
+}
+
+.logo-text {
+  font-family: 'Poiret One';
+  font-size: 300%;
+}
+
+.code-block {
+  @extend .well;
+  white-space: pre-wrap;
+  font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+}
+
+.code-error {
+  @extend .color-red;
+}
+
+.code-comment {
+  color: #808080;
+}
+
+.twitter-panel {
+  width: 100%;
+  @media screen and (max-width: $screen-md) {
+    display: none;
+  }
+}
+
+.bootstrap-info {
+  @media screen and (max-width: $screen-md) {
+      display: none;
+  }
+}
+
+.mobile-nav {
+  @media screen and (min-width: $screen-sm) {
+    display: none;
+  }
+}
+
+.main-nav {
+  @media screen and (max-width: $mobile) {
+    display: none;
+  }
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+/* */
+ul.blog-posts {
+  list-style-type: none;
+  padding-left: 0px;
+  li {
+    border-bottom: 1px solid $gray-light;
+    margin-bottom: 20px;
+  }
+}
+
+.blog-admin-top {
+//  @extend .well;
+  @extend .text-right;
+}
+
+.jumbotron-icon {
+  font-size: 80px;
+  margin-top: 20px;
+}
+
+.blog-post-icon {
+  color: $gray-light;
+  border: 1px double $gray-light;
+  border-width: 3px;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+/*
+ * ## END ##
+ */
+
+@import "datepicker";
