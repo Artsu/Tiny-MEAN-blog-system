@@ -2,7 +2,7 @@ Tiny MEAN blog system
 =====================
 Welcome to tiny MEAN blog system! It is a very small yet sturdy blog system that consists of full mean stack (<a href="http://www.mongodb.org/">Mongodb</a>, <a href="http://expressjs.com/">Express</a>, <a href="http://angularjs.org/">AngularJS</a> & <a href="http://nodejs.org/">NodeJS</a>). The system is mostly done for learning purposes, but feel free to use it in <a href="#license">any way you want</a>.
 
-<a href="http://nivasalo.com/projects/tiny-mean-blog">See the project webpage</a>
+<a href="http://nivasalo.com/projects/#tiny-mean-blog">See the project webpage</a>
 
 Features
 --------
