@@ -19,7 +19,7 @@ module.exports = function(config) {
       'app/bower_components/angular-route/angular-route.js',
       'app/bower_components/ng-ckeditor/ng-ckeditor.js',
       'app/bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
-      'app/scripts/lib/ckeditor/*.js',
+      'app/bower_components/ng-ckeditor/libs/ckeditor/ckeditor.js',
       'app/scripts/*.js',
       'app/scripts/**/*.js',
       'test/client/mock/**/*.js',

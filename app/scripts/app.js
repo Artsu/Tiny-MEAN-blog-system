@@ -67,9 +67,9 @@ angular.module('homepageApp', [
       .otherwise({
         redirectTo: '/'
       });
-      
+
     $locationProvider.html5Mode(true);
-      
+
     // Intercept 401s and redirect you to login
     $httpProvider.interceptors.push(['$q', '$location', function($q, $location) {
       return {
@@ -91,6 +91,7 @@ angular.module('homepageApp', [
       $window._gaq.push(['_trackPageview', $location.path()]);
       //I use nginx for serving static content. This ensures that requests for such content doesn't end up in express.
       if ($location.path().indexOf('/static') === 0) {
+        event.preventDefault();
         $window.location = $location.path();
       }
 

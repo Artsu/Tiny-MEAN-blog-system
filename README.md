@@ -2,8 +2,6 @@ Tiny MEAN blog system
 =====================
 Welcome to tiny MEAN blog system! It is a very small yet sturdy blog system that consists of full mean stack (<a href="http://www.mongodb.org/">Mongodb</a>, <a href="http://expressjs.com/">Express</a>, <a href="http://angularjs.org/">AngularJS</a> & <a href="http://nodejs.org/">NodeJS</a>). The system is mostly done for learning purposes, but feel free to use it in <a href="#license">any way you want</a>.
 
-<a href="http://nivasalo.com/projects/#tiny-mean-blog">See the project webpage</a>
-
 Features
 --------
 
@@ -12,7 +10,7 @@ The tiny MEAN blog system can do all this and more:
 * Add and edit new blog postsc
 * Delete blog posts
 * Automatic listing and pagination for blog posts
-* Embedded <a href="http://ckeditor.com/">ckeditor</a> for both content and ingress
+* Embedded <a href="http://ckeditor.com/">ckeditor</a> for both content and abstract
 * Dynamically created breadcrumb
 * AngularJS frontend
 * Node.js & Express backend
@@ -64,15 +62,14 @@ There are number of amazing technologies included in this project. Here are list
 
 TODO
 ----
-Some features are still under development and will be released later on. These include such as:
+Project is no longer in active development. Things that should be done next in case development is continued:
+* SEO
 * Validation messages
 * Tags
 * Image uploader
 * Hiding blog posts
 * Versioning
  
-Maybe at some point (no promises):
-* Creating pages with static content
 
 <a name="license"></a>License
 ----
